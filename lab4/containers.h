@@ -39,7 +39,7 @@ class container<bool, N> {
 
     word_t& get_element(size_t n) {
         size_t element_n = n / bits;
-        word_t& element = packed_elements[element_n];
+        return packed_elements[element_n];
     }
 
     void set_bit(word_t& element, size_t n, word_t value) {
