@@ -3,7 +3,7 @@
 
 #include <cstddef>
 
-// jakie są 'ciche' wymagania na typ T?
+// what are the requirements for T?
 template<typename T, size_t N>
 class container {
 
@@ -35,7 +35,7 @@ class container<bool, N> {
         return N / bits + (N % bits ? 1 : 0);
     }
 
-    word_t packed_elements[packed_size()];
+    word_t packed_elements[packed_size()] = {0};
 
     word_t& get_element(size_t n) {
         size_t element_n = n / bits;
